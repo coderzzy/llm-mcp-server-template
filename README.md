@@ -9,7 +9,19 @@ LLM-MCP server 开发的模版项目
 
 ## 项目相关
 
+### Client
+```
+python3 -m venv agents_env
+source agents_env/bin/activate
+
+pip install openai-agents
+pip show openai-agents-python
+
+```
+
 ing...
 初步计划：
 - server：使用 nodejs，openai接口
-- client：
+- client：使用 python
+
+https://www.cnblogs.com/smartloli/p/18801374
