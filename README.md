@@ -9,13 +9,26 @@ LLM-MCP server 开发的模版项目
 
 ## 项目相关
 
-### Client
+### 环境准备
 ```
-python3 -m venv agents_env
-source agents_env/bin/activate
+# 安装 uv 包管理工具，若已有，则跳过
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source ~/.local/bin/env
+uv --version
 
-pip install openai-agents
-pip show openai-agents-python
+# 安装python3.10，若已有，则跳过
+uv python list
+uv python install 3.10
+
+# client 目录，创建虚拟环境, 若已有，则跳过
+uv venv --python 3.10
+source .venv/bin/activate
+uv add openai-agents socksio
+
+# client 目录，正常运行
+source .venv/bin/activate
+export OPENAI_API_KEY=sk-xxx
+python openai_client.py
 
 ```
 
