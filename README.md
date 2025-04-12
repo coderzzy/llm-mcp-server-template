@@ -1,5 +1,7 @@
 # llm-mcp-server-template
 LLM-MCP server 开发的模版项目
+- server为数字比大小能力
+- client为各模型、各种调用方式
 
 ## MCP
 - https://modelcontextprotocol.io/introduction
@@ -11,6 +13,9 @@ LLM-MCP server 开发的模版项目
  - 主要负责实现mcp能力，如数学计算、文件读写、网络请求等
  - https://modelcontextprotocol.io/quickstart/server
  - 开发过程中，可以使用 mcp-server-inspector 工具协助调试
+ - 几种类型的server：
+    - 1、本地Stdio，client直接调用本地的server文件
+    - 2、远程聚合平台SSE，如Glama.ai、MCP.so等
 
  ### MCP-Client
 - 主要负责协调模型和mcp-server，最终实现"模型调用了mcp能力"
@@ -66,3 +71,10 @@ MCP Server，mcp-server-inspect调试页面：
 ![mcp-server-inspect](https://github.com/coderzzy/llm-mcp-server-template/blob/main/README_files/MCP_Inspector.jpg)
 
 MCP Client，...
+
+## TODO
+~~1、 mcp-server，本地开发和调试~~
+2、mcp-server，发布远程托管平台
+3、mcp-client，使用openai-agent-sdk调用server
+4、mcp-client，使用anthropic-sdk调用本地server
+5、mcp-client，使用langchain-mcp-adapter调用server
