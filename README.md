@@ -47,6 +47,7 @@ uv --version
 uv python list
 uv python install 3.10
 
+cd server
 # server 目录，创建虚拟环境, 若已有，则跳过
 uv venv --python 3.10
 source .venv/bin/activate
@@ -55,14 +56,15 @@ uv add "mcp[cli]" httpx
 # server目录，开发的时候用mcp-server-inspect调试
 mcp dev math.py
 
+cd client
 # client 目录，创建虚拟环境, 若已有，则跳过
 uv venv --python 3.10
 source .venv/bin/activate
 uv add openai-agents socksio
+touch .env  # 在.env文件中，设置OPENAI_API_KEY等
 
 # client 目录，正常运行
 source .venv/bin/activate
-# 运行前，在.env文件中，设置OPENAI_API_KEY等
 python openai_client.py
 ```
 

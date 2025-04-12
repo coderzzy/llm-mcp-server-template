@@ -1,10 +1,11 @@
 import asyncio
 
-# 设置你的OpenAI API Key（如果需要）
-# os.environ["OPENAI_API_KEY"] = "your-api-key-here"
-
 from agents import Agent, Runner
 from agents.mcp import MCPServerStdio
+from dotenv import load_dotenv
+
+load_dotenv()  # load environment variables from .env
+
 
 def test_env():
     # 测试代码
@@ -25,7 +26,9 @@ async def main():
     )
     print("the result of agent-without-mcp is: ")
     async for event in result_without_mcp.stream_events():
-        if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
+        if event.type == "raw_response_event" and isinstance(
+            event.data, ResponseTextDeltaEvent
+        ):
             print(event.data.delta, end="", flush=True)
 
     async with MCPServerStdio(
