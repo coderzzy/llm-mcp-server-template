@@ -62,7 +62,7 @@ uv add openai-agents socksio
 
 # client 目录，正常运行
 source .venv/bin/activate
-export OPENAI_API_KEY=sk-xxx
+# 运行前，在.env文件中，设置OPENAI_API_KEY等
 python openai_client.py
 ```
 
@@ -73,8 +73,8 @@ MCP Server，mcp-server-inspect调试页面：
 MCP Client，...
 
 ## TODO
-~~1、 mcp-server，本地开发和调试~~
-2、mcp-server，发布远程托管平台
-3、mcp-client，使用openai-agent-sdk调用server
-4、mcp-client，使用anthropic-sdk调用本地server
-5、mcp-client，使用langchain-mcp-adapter调用server
+~~1、 mcp-server，本地开发和调试~~  
+2、mcp-server，发布远程托管平台  
+3、mcp-client，使用openai-agent-sdk调用server  
+4、mcp-client，使用anthropic-sdk调用本地server  
+5、mcp-client，使用langchain-mcp-adapter调用server  
