@@ -6,6 +6,12 @@ import asyncio
 from agents import Agent, Runner
 from agents.mcp import MCPServerStdio
 
+def test_env():
+    # 测试代码
+    agent = Agent(name="TestAgent", instructions="Return 'Setup successful'")
+    result = Runner.run_sync(agent, "Run test")
+    print(result.final_output)  # Expected output: "Setup successful"
+
 
 async def main():
     # agent not use mcp
@@ -46,4 +52,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    # asyncio.run(main())
+    test_env()
