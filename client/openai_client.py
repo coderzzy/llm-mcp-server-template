@@ -3,11 +3,19 @@ import asyncio
 from agents import Agent, Runner
 from agents.mcp import MCPServerStdio
 from dotenv import load_dotenv
+from openai import OpenAI
 
 load_dotenv()  # load environment variables from .env
 
+def test_openai():
+    client = OpenAI()
+    response = client.responses.create(
+        model="gpt-4.1",
+        input="Write a one-sentence bedtime story about a unicorn."
+    )
+    print(response.output_text)
 
-def test_env():
+def test_openai_agent():
     # 测试代码
     agent = Agent(name="TestAgent", instructions="Return 'Setup successful'")
     result = Runner.run_sync(agent, "Run test")
@@ -56,4 +64,4 @@ async def main():
 
 if __name__ == "__main__":
     # asyncio.run(main())
-    test_env()
+    test_openai()

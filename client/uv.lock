@@ -114,6 +114,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "httpx" },
+    { name = "openai" },
     { name = "openai-agents" },
     { name = "socksio" },
 ]
@@ -121,6 +122,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
+    { name = "openai", specifier = ">=1.72.0" },
     { name = "openai-agents", specifier = ">=0.0.9" },
     { name = "socksio", specifier = ">=1.0.0" },
 ]
