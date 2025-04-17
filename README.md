@@ -76,7 +76,7 @@ MCP Client，不使用mcp和使用mcp的对比:
 - 命令行调用结果：
 ![openai_client_result1](https://github.com/coderzzy/llm-mcp-server-template/blob/main/README_files/openai_client_result1.jpg)
 - openai的dashboard上的log记录, mcp确实是两次调用:
-![openai_client_result2](https://github.com/coderzzy/llm-mcp-server-template/blob/main/README_files/openai_client_result1.jpg)
+![openai_client_result2](https://github.com/coderzzy/llm-mcp-server-template/blob/main/README_files/openai_client_result2.jpg)
 
 ## TODO
 ~~1、 mcp-server，本地开发和调试~~  
