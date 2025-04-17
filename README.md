@@ -72,11 +72,15 @@ python openai_client.py
 MCP Server，mcp-server-inspect调试页面：
 ![mcp-server-inspect](https://github.com/coderzzy/llm-mcp-server-template/blob/main/README_files/MCP_Inspector.jpg)
 
-MCP Client，...
+MCP Client，不使用mcp和使用mcp的对比:
+- 命令行调用结果：
+![openai_client_result1](https://github.com/coderzzy/llm-mcp-server-template/blob/main/README_files/openai_client_result1.jpg)
+- openai的dashboard上的log记录, mcp确实是两次调用:
+![openai_client_result2](https://github.com/coderzzy/llm-mcp-server-template/blob/main/README_files/openai_client_result1.jpg)
 
 ## TODO
 ~~1、 mcp-server，本地开发和调试~~  
 2、mcp-server，发布远程托管平台  
-3、mcp-client，使用openai-agent-sdk调用server  
+~~3、mcp-client，使用openai-agent-sdk调用server~~  
 4、mcp-client，使用anthropic-sdk调用本地server  
 5、mcp-client，使用langchain-mcp-adapter调用server  
