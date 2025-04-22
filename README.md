@@ -14,7 +14,8 @@ LLM-MCP server 开发的模版项目
  - https://modelcontextprotocol.io/quickstart/server
  - 开发过程中，可以使用 mcp-server-inspector 工具协助调试
  - 几种类型的server：
-    - 1、本地Stdio，client直接调用本地的server文件
+    - 1、本地Stdio，client直接调用本地的server文件（python or nodejs）
+        - plus: 把node项目推远程npm仓库，npx运行，实现半远程调用的效果
     - 2、远程聚合平台SSE，如Glama.ai、MCP.so等
 
  ### MCP-Client
