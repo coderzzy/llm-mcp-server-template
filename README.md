@@ -84,5 +84,6 @@ MCP Client，不使用mcp和使用mcp的对比:
 2、mcp-server，发布远程托管平台  
 ~~3、mcp-client，使用openai-agent-sdk调用server~~  
 4、mcp-client，使用anthropic-sdk调用本地server  
-5、mcp-client，使用langchain-mcp-adapter调用server  
-6、固定功能的 mcp-client + mcp-server，使用electron封装成桌面应用
+5、mcp-client，使用原生的写法（参考https://deepseek.csdn.net/67e383ff45a25f3de59f7bb0.html）调用本地server
+6、mcp-client，使用langchain-mcp-adapter调用server  
+7、固定功能的 mcp-client + mcp-server，使用electron封装成桌面应用
